@@ -9,4 +9,11 @@ class Agent:
 
     def __init__(self, **agent_attributes):
         for attr_name, attr_value in agent_attributes.items():
-            setattr(self,attr_name, attr_value
+            setattr(self,attr_name, attr_value)  
+
+def main():
+    for agent_attributes in json.load(open("agent-100k.json")):
+        agent = Agent()
+        print(agent)
+        
+
